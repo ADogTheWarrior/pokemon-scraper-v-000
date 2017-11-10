@@ -20,6 +20,7 @@ class Pokemon
     attributes[:type] = pokemon_array[0][2]
     attributes[:hp] = pokemon_array[0][2]
     attributes[:db] = db
+    binding.pry
     Pokemon.new(attributes)
   end
 
