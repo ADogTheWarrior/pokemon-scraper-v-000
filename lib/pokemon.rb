@@ -1,12 +1,11 @@
 class Pokemon
   @@all = []
-  attr_accessor :id, :name, :type, :db
+  attr_accessor :id, :name, :type, :db, :hp
 
   def initialize(attributes)
     attributes.each {|key, value| self.send(("#{key}="), value)}
-    # @id = attributes[:id]
-    # @name = attributes[:name]
-    # @type = attributes[:type]
+    @hp = 60
+    @@all << self
   end
 
   def self.save(name, type, db)
@@ -27,6 +26,9 @@ class Pokemon
     all
   end
 
-  def alter_hp(damage)
+  def alter_hp(new_health, db)
+    db.execute("UPDATE pokemon SET hp = #{new_health} WHERE id = #{@id}")
+    @hp = new_health
+    binding.pry
   end
 end
