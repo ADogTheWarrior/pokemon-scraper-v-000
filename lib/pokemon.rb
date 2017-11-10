@@ -3,8 +3,8 @@ class Pokemon
   attr_accessor :id, :name, :type, :db, :hp
 
   def initialize(attributes)
-    attributes.each {|key, value| self.send(("#{key}="), value)}
     @hp = 60
+    attributes.each {|key, value| self.send(("#{key}="), value)}
     @@all << self
   end
 
