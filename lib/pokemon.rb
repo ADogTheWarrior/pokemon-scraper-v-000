@@ -18,7 +18,9 @@ class Pokemon
     attributes[:id] = pokemon_array[0][0]
     attributes[:name] = pokemon_array[0][1]
     attributes[:type] = pokemon_array[0][2]
-    attributes[:hp] = pokemon_array[0][3]
+    if pokemon_array[0][3] != nil
+      attributes[:hp] = pokemon_array[0][3]
+    end
     attributes[:db] = db
     binding.pry
     Pokemon.new(attributes)
