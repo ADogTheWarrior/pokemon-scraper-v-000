@@ -20,6 +20,7 @@ class Pokemon
     attributes[:type] = pokemon_array[0][2]
     if pokemon_array[0][3] != nil
       attributes[:hp] = pokemon_array[0][3]
+      binding.pry
     end
     attributes[:db] = db
     # binding.pry
