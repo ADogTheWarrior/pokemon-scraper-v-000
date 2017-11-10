@@ -18,6 +18,7 @@ class Pokemon
     attributes[:id] = pokemon_array[0][0]
     attributes[:name] = pokemon_array[0][1]
     attributes[:type] = pokemon_array[0][2]
+    attributes[:hp] = pokemon_array[0][2]
     attributes[:db] = db
     Pokemon.new(attributes)
   end
