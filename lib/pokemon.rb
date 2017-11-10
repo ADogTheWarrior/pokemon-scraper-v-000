@@ -23,7 +23,7 @@ class Pokemon
       # binding.pry
     end
     attributes[:db] = db
-    binding.pry
+    # binding.pry
     Pokemon.new(attributes)
   end
 
